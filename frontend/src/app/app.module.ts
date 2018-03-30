@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,6 +10,8 @@ import { RestaurantBoxComponent } from './restaurant-box/restaurant-box.componen
 import { DiscoverBoxComponent } from './discover-box/discover-box.component';
 import { FooterComponent } from './footer/footer.component';
 import { SelectComponent } from './select/select.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -22,16 +24,13 @@ import { SelectComponent } from './select/select.component';
     DiscoverBoxComponent,
     FooterComponent,
     SelectComponent,
+    AboutComponent,
    
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {path: 'select', component: SelectComponent},
-     
-  ]),
-    BrowserAnimationsModule
-  ],
+    AppRoutingModule],
+   
   providers: [],
   bootstrap: [AppComponent]
 })
