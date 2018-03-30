@@ -6,7 +6,7 @@ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
-      database: 'nookDatabase',
+      database: '',
       user:     '',
       password: ''
     }
