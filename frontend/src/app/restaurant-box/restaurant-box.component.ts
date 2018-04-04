@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
 
+import { RestaurantsComponent } from '../restaurants/restaurants.component';
+
 @Component({
   selector: 'app-restaurant-box',
   templateUrl: './restaurant-box.component.html',
