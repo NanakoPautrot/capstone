@@ -1,13 +1,6 @@
-#restaurantBox {
-    background-color:rgb(231, 77, 77);
-    width: 300px;
-    height: 100px;
-    border-radius: 5px;
-    margin: 10rem;
-  }
-
-  #find {
-    padding-top: 2rem;
-    text-align: center;
-  
-  }
+#find {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

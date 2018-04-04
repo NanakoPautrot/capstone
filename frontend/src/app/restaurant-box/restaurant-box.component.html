@@ -1,3 +1,38 @@
-<div id="restaurantBox">
-    <a routerLink="/select" routerLinkActive="active">Find restaurants</a>
+<!-- ================== restaurant-box.component.html =================== -->
+
+<div id="find" class="container">
+   
+    
+ 
+    <form class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Facilities
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                        <label class="form-check-label" for="dropdownCheck">
+                          Kids menu
+                        </label>
+                        <div class="dropdown-divider"></div>
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                        <label class="form-check-label" for="dropdownCheck">
+                          High chair
+                        </label>
+                        <div class="dropdown-divider"></div>
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                        <label class="form-check-label" for="dropdownCheck">
+                         Diaper changing facility 
+                        </label>
+                        <label class="form-check-label" for="dropdownCheck">
+                            Play area
+                        </label>
+
+                </div> <!-- close FORM CHECK -->
+              <div class="dropdown-divider"></div>
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </div> <!-- close DROPDOWN MENU -->
+        </form> <!-- close DROPDOWN SHOW -->
+       
 </div>
