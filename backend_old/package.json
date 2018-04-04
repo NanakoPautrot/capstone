@@ -1,0 +1,28 @@
+{
+  "name": "restaurants",
+  "version": "1.0.0",
+  "description": "app for searching restaurants",
+  "main": "knexfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Warren&Nanako",
+  "license": "ISC",
+  "dependencies": {
+    "@types/body-parser": "^1.16.8",
+    "@types/cors": "^2.8.3",
+    "@types/dotenv": "^4.0.2",
+    "@types/express": "^4.11.1",
+    "@types/knex": "^0.14.9",
+    "@types/node": "^9.6.1",
+    "@types/pg": "^7.4.5",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "knex": "^0.14.4",
+    "pg": "^7.4.1",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.8.1"
+  }
+}
