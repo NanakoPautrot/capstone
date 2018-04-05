@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { RestaurantBoxComponent } from './restaurant-box/restaurant-box.component';
 import { MainComponent } from './main/main.component';
+import { SidebarComponent } from  './sidebar/sidebar.component';
 
 
 const routes: Routes = [
@@ -18,3 +19,5 @@ const routes: Routes = [
   declarations: []
 })
 export class AppRoutingModule { }
+
+export const routingComponent = [MainComponent,AboutComponent,RestaurantBoxComponent  ]
