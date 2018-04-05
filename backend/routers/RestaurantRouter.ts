@@ -16,7 +16,8 @@ export default class RestaurantRouter{
     router(){
         let router = express.Router();
         router.get("/", this.get.bind(this));
-        router.get("/facilities", this.getFacilities.bind(this));
+        router.get("/:district", this.getRestauByDistrict.bind(this));
+        router.get("/district-:facility", this.getRestauByFacility.bind(this));
         
         return router;
     }
@@ -30,9 +31,20 @@ export default class RestaurantRouter{
                 res.status(500).json(err)
             });
     }
-    getFacilities(req: express.Request, res: express.Response){
-        let params:number[] = req.params.id
-        return this.restaurantService.restauFacilitiesList(params)
+    getRestauByDistrict(req: express.Request, res: express.Response){
+         let district:string = req.params.district;
+        return this.restaurantService.districtRestau(district)
+        .then((data) =>{
+            res.json(data);
+        })
+        .catch((err: express.Errback) => {
+            res.status(500).json(err)
+        });
+    }
+    getRestauByFacility(req: express.Request, res: express.Response){
+        let district:string = req.params.district;
+        let facility:number     =req.params.facility;
+        return this.restaurantService.restauByFacility(district,facility)
         .then((data) =>{
             res.json(data);
         })

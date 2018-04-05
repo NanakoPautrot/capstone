@@ -13,10 +13,11 @@ export default class DistrictService {
     }
 
     list() {
-        return  this.knex('districts').select()
-        .map((items:any)=>{
-          let obj = {ID:items.id, Region:items.region,District:items.name };
-            return obj;
-        });
+        return  this.knex('districts').select();
+     }
+
+     location(district:string) {
+         return this.knex('districts').select('districts.name')
+         .where('districts.region', district);
      }
 }

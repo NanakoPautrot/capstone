@@ -35,15 +35,29 @@ export default class RestaurantService {
             'region_name'      : 'districts.region'                   
         });
     }
-    //to get restaurants requested by region by facilities
-    restauFacilitiesList(){
-        return this.list()
-        .then((table)=>{
-            return this.knex(table)
-            .select('restaurants.name','restaurants.address')
-            .from(table)
-            .innerJoin('restaurants_facilities' as 'rf', 'rf.restaurant_id', 'restaurants.id')
-            .where('rf.facility_id', '=',2);
-        });
+    //to get restaurants by a specific selected district
+    districtRestau(district:string){
+        return this.knex('restaurants')
+            .innerJoin('districts', 'districts.id', 'restaurants.district_id')
+            .innerJoin('restaurants_facilities', 'restaurants_facilities.restaurant_id', 'restaurants.id')
+            .select({
+                Restaurant_name:'restaurants.name',
+                Restaurant_address:'restaurants.address'
+            })
+            .where('districts.name', district);
+        }
+
+    restauByFacility(district:string,facility:number){
+        return this.knex('restaurants')
+        .join('districts', 'districts.id', 'restaurants.district_id')
+        .join('restaurants_facilities', 'restaurants_facilities.restaurant_id', 'restaurants.id')
+        .select({
+            Restaurant_name:'restaurants.name',
+            Restaurant_address:'restaurants.address'
+        })
+        .where('districts.name', district)
+        .where('restaurants_facilities.facility_id',2)
     }
-}
+        
+    }
+    

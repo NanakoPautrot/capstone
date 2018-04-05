@@ -10,9 +10,6 @@ import DistrictRouter    from './routers/DistrictRouter';
 import DistrictService   from './services/DistrictService';
 import FacilitiesRouter    from './routers/FacilitiesRouter';
 import FacilitiesService   from './services/FacilitiesService';
-import RestauFacilitiesRouter    from './routers/RestauFacilitiesRouter';
-import RestauFacilitiesService   from './services/RestauFacilitiesService';
-
 
 // Loads `.env`into`process.env
 dotenv.config();
@@ -39,22 +36,22 @@ let districtRouter = new DistrictRouter(districtService);
 let facilitiesService = new FacilitiesService(knex);
 let facilitiesRouter = new FacilitiesRouter(facilitiesService);
 
-// Create restaurants by Facilities Router
-let restauFacilitiesService = new RestauFacilitiesService(knex);
-let restauFacilitiesRouter = new RestauFacilitiesRouter(restauFacilitiesService);
 
 // Include Body Parser to handle json
 app.use(bodyParser.json());
 // Include Restaurant Router to handle requests from /restaurants
 app.use('/restaurants', restaurantRouter.router());
+app.use('/restaurants/:district/', restaurantRouter.router());
+app.use('/restaurants/district-:facility"', restaurantRouter.router());
 // Include District Router to handle requests from /districts
 app.use('/districts', districtRouter.router());
+app.use('/districts/:district', districtRouter.router());
 
 // Include Facilities Router to handle requests from /facilities
-app.use('/facilities', facilitiesRouter.router());
+app.use('/restaurants/facilities', facilitiesRouter.router());
 
-// Include Restaurant by Facilities Router to handle requests from /restaurants/facilities
-app.use('/restaurants/facilities', restauFacilitiesRouter.router());
+app.use('/restaurants/restauFacilities', restaurantRouter.router());
+
 
 
 // Start express 
