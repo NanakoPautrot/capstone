@@ -1,7 +1,7 @@
 <div id="mockList" class="container">
 <h2>Restaurants List</h2>
 <ul class="mock_list">
-  <li *ngFor="let restaurants of this.restaurants" >
+  <li *ngFor="let restaurant of this.restaurants | async" >
     <span class="badge">{{this.restaurants.name}}</span> 
   </li>
 </ul>

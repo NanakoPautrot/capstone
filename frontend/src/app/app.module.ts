@@ -39,10 +39,7 @@ import { HttpModule } from '@angular/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    HttpModule
   ],
    
   providers: [
