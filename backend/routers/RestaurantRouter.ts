@@ -16,7 +16,7 @@ export default class RestaurantRouter{
     router(){
         let router = express.Router();
         router.get("/", this.get.bind(this));
-        router.get("/facilities", this.getFacilities.bind(this));
+        // router.get("/facilities", this.getFacilities.bind(this));
         
         return router;
     }
@@ -30,16 +30,16 @@ export default class RestaurantRouter{
                 res.status(500).json(err)
             });
     }
-    getFacilities(req: express.Request, res: express.Response){
-        let params:number[] = req.params.id
-        return this.restaurantService.restauFacilitiesList(params)
-        .then((data) =>{
-            res.json(data);
-        })
-        .catch((err: express.Errback) => {
-            res.status(500).json(err)
-        });
-    }
+    // getFacilities(req: express.Request, res: express.Response){
+    //     let params:number[] = req.params.id
+    //     return this.restaurantService.restauFacilitiesList(params)
+    //     .then((data) =>{
+    //         res.json(data);
+    //     })
+    //     .catch((err: express.Errback) => {
+    //         res.status(500).json(err)
+    //     });
+    // }
 }
 
 
