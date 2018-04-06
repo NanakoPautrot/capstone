@@ -17,7 +17,7 @@ export default class RestaurantRouter{
         let router = express.Router();
         router.get("/", this.get.bind(this));
         router.get("/:district", this.getRestauByDistrict.bind(this));
-        router.get("/district-:facility", this.getRestauByFacility.bind(this));
+        router.get("/:district/:facility", this.getRestauByFacility.bind(this));
         
         return router;
     }
@@ -25,6 +25,7 @@ export default class RestaurantRouter{
     get(req: express.Request, res: express.Response){
         return this.restaurantService.list()
             .then((data) => {
+                console.log("success")
                 res.json(data);
             })
             .catch((err: express.Errback) => {

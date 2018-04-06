@@ -41,22 +41,55 @@ export default class RestaurantService {
             .innerJoin('districts', 'districts.id', 'restaurants.district_id')
             .innerJoin('restaurants_facilities', 'restaurants_facilities.restaurant_id', 'restaurants.id')
             .select({
-                Restaurant_name:'restaurants.name',
-                Restaurant_address:'restaurants.address'
+                'id'               : 'restaurants.id',       
+                'name'             : 'restaurants.name',                     
+                'telephone'        : 'restaurants.telephone',              
+                'address'          : 'restaurants.address',            
+                'latitude'         : 'restaurants.latitude',               
+                'longitude'        : 'restaurants.longitude',              
+                'img_url'          : 'restaurants.img_url',            
+                'cuisine'          : 'restaurants.cuisine',            
+                'category'         : 'restaurants.category',               
+                'rating'           : 'restaurants.rating',             
+                'score_smile'      : 'restaurants.score_smile',            
+                'score_ok'         : 'restaurants.score_ok',              
+                'score_sad'        : 'restaurants.score_sad',              
+                'price_range'      : 'restaurants.price_range',            
+                'district_id'      : 'districts.id',                       
+                'district_name'    : 'districts.name',                        
+                'region_name'      : 'districts.region' ,
             })
-            .where('districts.name', district);
+            .where('districts.name', district)
         }
 
     restauByFacility(district:string,facility:number){
         return this.knex('restaurants')
         .join('districts', 'districts.id', 'restaurants.district_id')
         .join('restaurants_facilities', 'restaurants_facilities.restaurant_id', 'restaurants.id')
+        .join('facilities', 'facilities.id','restaurants_facilities.facility_id')
         .select({
-            Restaurant_name:'restaurants.name',
-            Restaurant_address:'restaurants.address'
+            'id'               : 'restaurants.id',
+            'facility_id'      : 'restaurants_facilities.facility_id', 
+            'facility_name'    : 'facilities.description',     
+            'name'             : 'restaurants.name',                     
+            'telephone'        : 'restaurants.telephone',              
+            'address'          : 'restaurants.address',            
+            'latitude'         : 'restaurants.latitude',               
+            'longitude'        : 'restaurants.longitude',              
+            'img_url'          : 'restaurants.img_url',            
+            'cuisine'          : 'restaurants.cuisine',            
+            'category'         : 'restaurants.category',               
+            'rating'           : 'restaurants.rating',             
+            'score_smile'      : 'restaurants.score_smile',            
+            'score_ok'         : 'restaurants.score_ok',              
+            'score_sad'        : 'restaurants.score_sad',              
+            'price_range'      : 'restaurants.price_range',            
+            'district_id'      : 'districts.id',                       
+            'district_name'    : 'districts.name',                        
+            'region_name'      : 'districts.region' 
         })
         .where('districts.name', district)
-        .where('restaurants_facilities.facility_id',2)
+        .andWhere('restaurants_facilities.facility_id',facility)
     }
         
     }

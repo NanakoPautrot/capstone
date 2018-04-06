@@ -10,6 +10,7 @@ import DistrictRouter    from './routers/DistrictRouter';
 import DistrictService   from './services/DistrictService';
 import FacilitiesRouter    from './routers/FacilitiesRouter';
 import FacilitiesService   from './services/FacilitiesService';
+import * as cors from 'cors';
 
 // Loads `.env`into`process.env
 dotenv.config();
@@ -22,6 +23,7 @@ const knex = Knex(Knexfile[NODE_ENV]);
 
 // Creates an Express application
 let app = express();
+app.use(cors());
 
 // Create Restaurant Service Object & Restaurant Router
 let restaurantService = new RestaurantService(knex);
@@ -40,12 +42,12 @@ let facilitiesRouter = new FacilitiesRouter(facilitiesService);
 // Include Body Parser to handle json
 app.use(bodyParser.json());
 // Include Restaurant Router to handle requests from /restaurants
-app.use('/restaurants', restaurantRouter.router());
-app.use('/restaurants/:district/', restaurantRouter.router());
-app.use('/restaurants/district-:facility"', restaurantRouter.router());
+app.use('/restaurants', restaurantRouter.router());//ok
+app.use('/restaurants/:district/', restaurantRouter.router());//ok
+app.use('/restaurants/:district/:facility', restaurantRouter.router());
 // Include District Router to handle requests from /districts
-app.use('/districts', districtRouter.router());
-app.use('/districts/:district', districtRouter.router());
+app.use('/districts', districtRouter.router());//ok
+app.use('/districts/:district', districtRouter.router());//ok
 
 // Include Facilities Router to handle requests from /facilities
 app.use('/restaurants/facilities', facilitiesRouter.router());
