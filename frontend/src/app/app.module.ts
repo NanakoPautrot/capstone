@@ -40,9 +40,9 @@ import { HttpModule } from '@angular/http';
     AppRoutingModule,
     HttpClientModule,
     HttpModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // )
   ],
    
   providers: [

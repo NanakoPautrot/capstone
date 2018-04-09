@@ -19,21 +19,30 @@ import { RestaurantRegionService } from '../restaurant-region.service';
 
 export class RestaurantsComponent implements OnInit {
 
-restaurants: Restaurant[];
+  restaurants: Restaurant[];
 
-  constructor(private restaurantService : RestaurantService, private route: ActivatedRoute, private router: Router, private restaurantRegionService: RestaurantRegionService) { }
-
+  //constructor(private restaurantService : RestaurantService, private route: ActivatedRoute, private router: Router, private restaurantRegionService: RestaurantRegionService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private restaurantService: RestaurantService) { }
   ngOnInit() {
   this.getRestaurants();
-  this.restaurantRegionService.postRegion(this.route.queryParams).subscribe();
+  //this.restaurantRegionService.postRegion(this.route.queryParams).subscribe();
   }
-
 
   getRestaurants(): void {
     this.restaurantService.getRestaurants()
-    .subscribe(restaurants => this.restaurants = restaurants);
-    console.log(this.restaurants); //this function is to retrieve the heroes from the service
-  }
+    .subscribe((restaurants)=>{
+      console.log(restaurants);
+      restaurants=this.restaurants;
+    } )
+    //.subscribe(restaurants => console.log(restaurants));
+  } 
+  
+  // getRestaurants(): void {
+  //   this.restaurantService.getRestaurants()
+  //   .subscribe(restaurants => this.restaurants = restaurants);
+  //   console.log(this.restaurants); //this function is to retrieve the heroes from the service
+  // }
+ 
 
 }
 

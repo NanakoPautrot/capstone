@@ -1,8 +1,16 @@
 <div id="mockList" class="container">
 <h2>Restaurants List</h2>
+<p>Here we show restaurants from the backend</p>
+<!--
 <ul class="mock_list">
   <li *ngFor="let restaurants of this.restaurants" >
     <span class="badge">{{this.restaurants.name}}</span> 
+  </li>
+</ul>
+-->
+<ul class="mock_list">
+  <li *ngFor="let restaurant of restaurants" >
+    <span class="badge">{{restaurant.name}}</span> 
   </li>
 </ul>
 </div>

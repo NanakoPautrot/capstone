@@ -37,14 +37,14 @@ let districtRouter = new DistrictRouter(districtService);
 // Create Facilities Service Object & Facilities Router
 let facilitiesService = new FacilitiesService(knex);
 let facilitiesRouter = new FacilitiesRouter(facilitiesService);
-
+app.use(cors());
 
 // Include Body Parser to handle json
 app.use(bodyParser.json());
 // Include Restaurant Router to handle requests from /restaurants
 app.use('/restaurants', restaurantRouter.router());//ok
 app.use('/restaurants/:district/', restaurantRouter.router());//ok
-app.use('/restaurants/:district/:facility', restaurantRouter.router());
+app.use('/restaurants/:district/:facility', restaurantRouter.router());//ok
 // Include District Router to handle requests from /districts
 app.use('/districts', districtRouter.router());//ok
 app.use('/districts/:district', districtRouter.router());//ok
