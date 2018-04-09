@@ -5,7 +5,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 @Injectable()
 export class InMemoryDataService implements InMemoryDbService{
   createDb(){
-    const RESTAURANTS = [
+    const Restaurants = [
 
       { id: 1, name: 'ABC Cafe', address: "118 ABC LANE", telephone: 1111111 },
       { id: 2, name: 'Noodle', address: "2 Noodle Bowl Strret", telephone: 2121212 },
@@ -18,7 +18,7 @@ export class InMemoryDataService implements InMemoryDbService{
       { id: 9, name: 'SwordFish', address: "74 River Sea", telephone: 3008764 },
       { id: 10, name: 'Dim Dum ', address: "4 Doom Lane", telephone: 97222115 }, 
   ];
-  return { RESTAURANTS };
+  return { Restaurants };
   }
 
   constructor() { }

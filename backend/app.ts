@@ -2,6 +2,7 @@ import * as express      from 'express';
 import * as bodyParser   from 'body-parser';
 import * as dotenv       from 'dotenv';
 import * as Knex         from 'knex';
+import * as cors         from 'cors';
 
 import * as Knexfile     from './knexfile';
 import RestaurantRouter  from './routers/RestaurantRouter';
@@ -10,12 +11,12 @@ import DistrictRouter    from './routers/DistrictRouter';
 import DistrictService   from './services/DistrictService';
 import FacilitiesRouter    from './routers/FacilitiesRouter';
 import FacilitiesService   from './services/FacilitiesService';
-import * as cors from 'cors';
+
 
 // Loads `.env`into`process.env
 dotenv.config();
 // Get Server Port
-const PORT = process.env.PORT || '8080';
+const PORT = '3030';
 // Get node environment
 const NODE_ENV = process.env.NODE_ENV || 'development';
 // Initialize Knex base on node environment

@@ -1,0 +1,32 @@
+Arguments: 
+  /usr/bin/node /home/nanako11/.npm-global/bin/yarn install dependencies
+
+PATH: 
+  /home/nanako11/.npm-global/bin:/home/nanako11/bin:/home/nanako11/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/ProgramData/Oracle/Java/javapath_target_608377531:/mnt/c/Program Files (x86)/Intel/iCLS Client:/mnt/c/Program Files/Intel/iCLS Client:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Program Files/Intel/WiFi/bin:/mnt/c/Program Files/Common Files/Intel/WirelessCommon:/mnt/c/Program Files/nodejs:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Users/HP/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Users/HP/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/HP/AppData/Local/atom/bin:/mnt/c/Users/HP/AppData/Roaming/npm:/snap/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.9.3
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: `install` has been replaced with `add` to add new dependencies. Run "yarn add dependencies" instead.
+      at new MessageError (/home/nanako11/.npm-global/lib/node_modules/yarn/lib/cli.js:186:110)
+      at Object.<anonymous> (/home/nanako11/.npm-global/lib/node_modules/yarn/lib/cli.js:21987:13)
+      at Generator.next (<anonymous>)
+      at step (/home/nanako11/.npm-global/lib/node_modules/yarn/lib/cli.js:98:30)
+      at /home/nanako11/.npm-global/lib/node_modules/yarn/lib/cli.js:109:13
+      at <anonymous>
