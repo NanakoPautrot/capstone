@@ -22,23 +22,6 @@ const httpOptions = {
 
 @Injectable()
 export class RestaurantService {
-<<<<<<< HEAD
-  //private restaurantsUrl = 'api/restaurants';  //URL to web api
-  private restaurantsUrl = 'localhost:8080/restaurants';
-
-  constructor(private http: HttpClient) { }
-
-  // getRestaurants(): Observable <Restaurant[]> {
-  //   //return of (RESTAURANTS);
-  //   return this.http.get<Restaurant[]>(this.restaurantsUrl)
-    
-  // }
-
-  getRestaurants(){
-    return this.http.get('http://localhost:8080/restaurants/Kowloon Bay/4');
-    
-   }
-=======
  // private restaurantsUrl = '/api/restaurants';  //URL to web api
 
   constructor(private http: HttpClient) { }
@@ -52,6 +35,5 @@ export class RestaurantService {
    return this.http.get('http://localhost:3030/restaurants')
    
   }
->>>>>>> d70ef2c706ce9be4af5d40d69c7654fb6aad7e64
 
 }
