@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { LocationsComponent } from '../locations/locations.component';
+import { LocationsService } from '../locations.service';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',

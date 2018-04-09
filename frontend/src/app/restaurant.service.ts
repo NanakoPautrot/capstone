@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 import { Restaurant } from './restaurant';
 //import { RESTAURANTS } from './mock-restaurants-list';
