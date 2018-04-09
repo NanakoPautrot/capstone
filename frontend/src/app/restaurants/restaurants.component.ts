@@ -20,19 +20,19 @@ import { RestaurantRegionService } from '../restaurant-region.service';
 
 export class RestaurantsComponent implements OnInit {
 
-restaurants: Restaurant[];
+restaurants: any;
 
   constructor(private route: ActivatedRoute, private router: Router, private restaurantService: RestaurantService) { }
 
   //constructor(private restaurantService : RestaurantService, private route: ActivatedRoute, private router: Router, private restaurantRegionService: RestaurantRegionService) { }
- // constructor(private route: ActivatedRoute, private router: Router, private restaurantService: RestaurantService) { }
+ 
   ngOnInit() {
   this.getRestaurants();
   }
 
   getRestaurants(): void {
     this.restaurantService.getRestaurants()
-    .subscribe(restaurants => console.log(restaurants));
+    .subscribe(res => this.restaurants=res);
   }
 
 }

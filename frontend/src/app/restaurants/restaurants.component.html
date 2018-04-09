@@ -10,7 +10,19 @@
 -->
 <ul class="mock_list">
   <li *ngFor="let restaurant of restaurants" >
-    <span class="badge">{{restaurant.name}}</span> 
+    <span class="badge"><a href="">{{restaurant.name}}</a>&nbsp;{{restaurant.address}}</span> 
   </li>
 </ul>
 </div>
+
+<div id="address" class="right">
+  <h2>Addresses for restaurants</h2>
+  <p>Here we show restaurants from the backend</p>
+  <!--
+  <ul class="mock_list">
+    <li *ngFor="let restaurant of this.restaurants | async" >
+      <span class="badge">{{this.restaurants.name}}</span> 
+    </li>
+  </ul>
+  -->
+ 
