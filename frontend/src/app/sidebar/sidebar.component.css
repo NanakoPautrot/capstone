@@ -2,8 +2,8 @@
 #heading {
     padding-top: 1.5em;
     background-color: rgb(236, 63, 63);
-    height: 90vh;
-    width: 200px;
-    position: absolute;
+    min-height: 90vh;
+    width:22%; 
+   
 } 
 

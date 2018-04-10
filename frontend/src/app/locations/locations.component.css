@@ -1,7 +1,17 @@
 
 #districsList {
-  width: 30%;
-  position:  absolute;
-  
-    background-color: aqua;
+  width: 20%;
+  max-height:50%;
+  position:absolute;
+  background-color: aqua;
+  margin-left:10px;
+  overflow:auto;
+}
+li{
+  list-style-type: none;
+  padding:3px;
+  border-bottom:1px solid #ccc;
+}
+li :hover{
+  background-color:orange;
 }

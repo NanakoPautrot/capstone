@@ -13,10 +13,6 @@ export default class FacilitiesService {
     }
 
     list() {
-        return  this.knex('facilities').select()
-        .map((items:any)=>{
-          let obj = {ID:items.id, Description:items.description};
-            return obj;
-        });
+        return  this.knex('facilities').select('id','description');
      }
 }

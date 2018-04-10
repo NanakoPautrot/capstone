@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-//import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -9,12 +8,11 @@ const httpOptions = {
 };
 
 @Injectable()
-export class LocationsService {
+export class FacilitiesService {
 
-  
   constructor(private http:HttpClient) { }
-  getDistricts() {
-    return this.http.get('http://localhost:3030/districts/')
-}
 
+getFacilities(){
+   return this.http.get('http://localhost:3030/facilities')
+}
 }

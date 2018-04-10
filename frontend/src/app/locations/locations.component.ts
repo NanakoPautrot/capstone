@@ -22,8 +22,11 @@ districts: any;
 
   getDistricts(): void {
     this.locationsService.getDistricts()
-    .subscribe(res => this.districts=res);
-    
+    .subscribe(res => {
+      this.districts=res;
+      console.log(res);
+    });
+  
   }
 
 }

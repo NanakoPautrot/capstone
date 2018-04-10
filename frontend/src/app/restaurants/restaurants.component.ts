@@ -18,6 +18,8 @@ import { RestaurantRegionService } from '../restaurant-region.service';
 export class RestaurantsComponent implements OnInit {
 
 restaurants: any;
+district:string;
+facility?:number;
 
   constructor(private route: ActivatedRoute, private router: Router, private restaurantService: RestaurantService) { }
 
@@ -28,7 +30,7 @@ restaurants: any;
   }
 
   getRestaurants(): void {
-    this.restaurantService.getRestaurants()
+    this.restaurantService.getRestaurants('Tsim Sha Tsui',3)
     .subscribe(res => this.restaurants=res);
   }
 

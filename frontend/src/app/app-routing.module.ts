@@ -10,7 +10,7 @@ import { SidebarComponent } from  './sidebar/sidebar.component';
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'restaurant', component: RestaurantBoxComponent },
+  { path: 'restaurants', component: RestaurantBoxComponent },
 ];
 
 @NgModule({ 

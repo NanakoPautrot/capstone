@@ -12,9 +12,11 @@ export default class RestaurantService {
         this.knex = knex
     }
 
-    list() {
+    list(district: string = '', facility?: number) {
         return this.knex('restaurants')
         .innerJoin('districts', 'districts.id', 'restaurants.district_id')
+        .innerJoin('restaurants_facilities', 'restaurants_facilities.restaurant_id', 'restaurants.id')
+        .join('facilities', 'facilities.id','restaurants_facilities.facility_id')
         .select({
             'id'               : 'restaurants.id',       
             'name'             : 'restaurants.name',                     
@@ -33,7 +35,9 @@ export default class RestaurantService {
             'district_id'      : 'districts.id',                       
             'district_name'    : 'districts.name',                        
             'region_name'      : 'districts.region'                   
-        });
+        })
+        .where('districts.name', district)
+        .andWhere('restaurants_facilities.facility_id',facility)
     }
     //to get restaurants by a specific selected district
     districtRestau(district:string){

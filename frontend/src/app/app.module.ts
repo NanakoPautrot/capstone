@@ -21,6 +21,8 @@ import { RestaurantService } from './restaurant.service';
 import { RestaurantRegionService } from './restaurant-region.service';
 import { LocationsService } from './locations.service';
 import { HttpModule } from '@angular/http';
+import { FacilitiesComponent } from './facilities/facilities.component';
+import { FacilitiesService } from './facilities.service';
 
 
 
@@ -36,6 +38,7 @@ import { HttpModule } from '@angular/http';
     SidebarComponent,
     RestaurantsComponent,
     LocationsComponent,
+    FacilitiesComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { HttpModule } from '@angular/http';
   providers: [
     RestaurantService,
     RestaurantRegionService,
-    LocationsService
+    LocationsService,
+    FacilitiesService
   ],
   bootstrap: [AppComponent]
 })

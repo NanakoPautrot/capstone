@@ -336,14 +336,6 @@ exports.seed = (knex: Knex) => {
                             }
                         }
 
-
-                        //     if(restaurant.category === 'Food Court') {
-                        //         result.push({ restaurant_id: restaurant.id, facility_id: 2 });
-                        //     }
-                        //     if (restaurant.category === 'Hotel Restaurant') {
-                        //         result.push({ restaurant_id: restaurant.id, facility_id: 2 });
-                        //         result.push({ restaurant_id: restaurant.id, facility_id: 3 });
-                        //     }
                         return result;
                     }, []);
                 })

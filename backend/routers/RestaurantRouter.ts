@@ -16,14 +16,26 @@ export default class RestaurantRouter{
     router(){
         let router = express.Router();
         router.get("/", this.get.bind(this));
-        router.get("/:district", this.getRestauByDistrict.bind(this));
-        router.get("/:district/:facility", this.getRestauByFacility.bind(this));
+        // router.get("/:district", this.getRestauByDistrict.bind(this));
+        // router.get("/:district/:facility", this.getRestauByFacility.bind(this));
         
         return router;
     }
 
     get(req: express.Request, res: express.Response){
-        return this.restaurantService.list()
+        let district:string;
+        let facility:number;
+        if(req.query.facility == null){
+             district = req.query.district;
+        }else{
+            district= req.query.district;
+            facility =req.query.facility;
+        }
+        // check if req.query.facility is empty string?
+        // if yes => then no need filtering
+        // if no => do the filtering for facility
+        // check if req.query.district is empty string?
+        return this.restaurantService.list(district,facility)
             .then((data) => {
                 console.log("success")
                 res.json(data);

@@ -30,8 +30,8 @@ export class RestaurantService {
     
     //return this.http.get<Restaurant[]>(this.restaurantsUrl);
    // return this.http.get(`${environment}/api/restaurants`).map((res)=>res.json());
-   getRestaurants() {
-   return this.http.get('http://localhost:3030/restaurants')
+   getRestaurants(district: string = '', facility: number = null) { // = 'Hong Kong
+   return this.http.get('http://localhost:3030/restaurants/?district=' + district + '&facility=' + facility)
    
   }
 

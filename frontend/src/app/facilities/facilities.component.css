@@ -1,0 +1,13 @@
+#facilityList {
+    width: 80%;
+    max-height:50%;
+    position:relative;
+    top:60%;
+    background-color: rgb(74, 233, 233);
+    margin-left:10px;
+   font-size:15px;
+    overflow:auto;
+  }
+  li{
+    list-style-type: none;
+  }
