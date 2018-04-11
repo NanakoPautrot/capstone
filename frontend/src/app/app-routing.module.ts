@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'about', component: AboutComponent },
   { path: 'restaurants', component: RestaurantBoxComponent },
+  { path: 'restaurants/:district', component: RestaurantBoxComponent }
 ];
 
 @NgModule({ 

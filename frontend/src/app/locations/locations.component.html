@@ -1,26 +1,9 @@
 <h3>Select a District</h3>
 
-<div id="districsList" class="container">
+<div id="districtList" class="container">
 <ul class="ul_list">
   <li *ngFor="let district of districts" >
   <button>{{district.name}}</button> 
   </li>
 </ul>
 </div>
-<!--
-<form class="dropdown show">
-  <a class="btn btn-danger btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Find Districts now
-  </a>
-
-    <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
-      <div class="form-check px-5 py-4">
-    
-       <div class="dropdown-divider"></div>  
-        <a routerLink="/restaurants" [queryParams]="{ district: district, facility:facility }">{{district.name}}</a>
-    
-        <div class="dropdown-divider"></div>  
-        
-     <div class="dropdown-divider"></div>   
-    </div>
-</form>     -->
