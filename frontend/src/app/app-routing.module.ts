@@ -8,10 +8,11 @@ import { SidebarComponent } from  './sidebar/sidebar.component';
 
 
 const routes: Routes = [
-  { path: '', component: MainComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', component: MainComponent},
   { path: 'about', component: AboutComponent },
   { path: 'restaurants', component: RestaurantBoxComponent },
-  { path: 'restaurants/:district', component: RestaurantBoxComponent }
+ 
 ];
 
 @NgModule({ 
