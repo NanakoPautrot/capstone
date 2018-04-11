@@ -2,8 +2,9 @@
 #heading {
     padding-top: 1.5em;
     background-color: rgb(236, 63, 63);
-    min-height: 90vh;
-    width:22%; 
-   
+    height: 100%;
+    width:100%; 
+    text-align: center;
 } 
+
 
