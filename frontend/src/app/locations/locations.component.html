@@ -1,4 +1,17 @@
+
 <h3>Select a District</h3>
+
+<div id="districsList" class="container">
+  <ul class="ul_list">
+    <li *ngFor="let district of districts">
+      <button (click)='buttonClick(district.name)' [disabled]="district.name === currentDistrict">{{district.name}}</button>
+    </li>
+  </ul>
+</div>
+
+
+<!--
+
 
 <div id="districtList" class="container">
 <ul class="ul_list">
@@ -7,3 +20,4 @@
   </li>
 </ul>
 </div>
+-->

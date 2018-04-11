@@ -14,20 +14,32 @@ import { LocationsService } from '../locations.service';
 export class LocationsComponent implements OnInit {
 
 districts: any;
+currentDistrict: any;
   constructor(private route: ActivatedRoute, private router: Router, private locationsService: LocationsService) { }
 
   ngOnInit() {
     this.getDistricts();
+    this.currentDistrict = this.route.queryParams['value'].district;
   }
 
   getDistricts(): void {
-    this.locationsService.getDistricts()
-    .subscribe(res => {
-      this.districts=res;
-      console.log(res);
-    });
-  
+    this.locationsService.getDistricts().subscribe((res: any) => {
+      this.districts = res.sort(sortDistrict);
+    }
+    );
   }
- 
-
+  buttonClick(name) {
+    console.log(name);
+  }
 }
+
+function sortDistrict(a, b) {
+  if (a.name < b.name) {
+      return -1;
+  }
+  if (a.name > b.name) {
+      return 1;
+  }
+  return 0;
+}
+
