@@ -35,8 +35,25 @@ export default class RestaurantRouter{
         // if yes => then no need filtering
         // if no => do the filtering for facility
         // check if req.query.district is empty string?
-        return this.restaurantService.list(district,facility)
-            .then((data) => {
+        return this.restaurantService.list(district)
+            .then((data:any) => {
+                console.log("success")
+                res.json(data);
+            })
+            .catch((err: express.Errback) => {
+                res.status(500).json(err)
+            });
+    }
+
+    getRestaurant(req: express.Request, res: express.Response){
+        let id :string;
+        id = req.query.id
+        // check if req.query.facility is empty string?
+        // if yes => then no need filtering
+        // if no => do the filtering for facility
+        // check if req.query.district is empty string?
+        return this.restaurantService.restaurant(id)
+            .then((data: any) => {
                 console.log("success")
                 res.json(data);
             })
@@ -45,14 +62,15 @@ export default class RestaurantRouter{
             });
     }
     getRestauByDistrict(req: express.Request, res: express.Response){
-         let district:string = req.params.district;
-        return this.restaurantService.districtRestau(district)
-        .then((data) =>{
-            res.json(data);
-        })
-        .catch((err: express.Errback) => {
-            res.status(500).json(err)
-        });
+        // let district:string = req.params.district;
+        //return this.restaurantService.districtRestau(district)
+        //.then((data) =>{
+        //    res.json(data);
+        //})
+        //.catch((err: express.Errback) => {
+        //    res.status(500).json(err)
+        //});
+        console.log(req.query.id)
     }
     getRestauByFacility(req: express.Request, res: express.Response){
         let district:string = req.params.district;
