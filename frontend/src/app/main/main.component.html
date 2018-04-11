@@ -1,33 +1,306 @@
 <!-- =============== main.component.html ================== -->
 
 <section class="jumbotron jumbotron-fluid banner">
-<div class="heading">
-    <h1>YummyFull</h1>
-    <br>
-    <h3>Dining made easy for you and your family</h3>
-    <br>
-    
-    <form class="dropdown show">
-        <a class="btn btn-danger btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Find restaurants now
+    <div class="heading">
+      <h1>YummyFull</h1>
+      <br>
+      <h3>Dining made easy for you and your family</h3>
+      <br>
+  
+      <form class="dropdown show">
+        <a class="btn btn-danger btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Find restaurants now
         </a>
-      
-          <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
-            <div class="form-check px-5 py-4">
-          
-             <div class="dropdown-divider"></div>  
-              <a routerLink="/restaurants" [queryParams]="{ region: 'hongkongisland' }">Hong Kong Island</a>
-          
-              <div class="dropdown-divider"></div>  
-              <a routerLink="/restaurants"  [queryParams]="{region: 'kowloon'}">Kowloon</a>
-          
-             <div class="dropdown-divider"></div>  
-              <a routerLink="/restaurants" [queryParams]="{region: 'New Territories'}">New Territories</a>
-            </div>
-           <div class="dropdown-divider"></div>   
+  
+        <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+          <div class="form-check px-5 py-4">
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Aberdeen'  }"> Aberdeen </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Admiralty'  }"> Admiralty </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Ap Lei Chau'  }"> Ap Lei Chau </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Causeway Bay'  }"> Causeway Bay </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Chai Wan'  }"> Chai Wan </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Cheung Sha Wan'  }"> Cheung Sha Wan </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Choi Hung'  }"> Choi Hung </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Deep Water Bay'  }"> Deep Water Bay </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Diamond Hill'  }"> Diamond Hill </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Fanling'  }"> Fanling </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Fo Tan'  }"> Fo Tan </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Happy Valley'  }"> Happy Valley </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Heng Fa Chuen'  }"> Heng Fa Chuen </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Ho Man Tin'  }"> Ho Man Tin </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Hung Hom'  }"> Hung Hom </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Jordan'  }"> Jordan </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Kowloon Bay'  }"> Kowloon Bay </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Kowloon City'  }"> Kowloon City </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Kowloon Tong'  }"> Kowloon Tong </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Kwai Chung'  }"> Kwai Chung </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Kwai Fong'  }"> Kwai Fong </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Kwun Tong'  }"> Kwun Tong </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Lai Chi Kok'  }"> Lai Chi Kok </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Lam Tin'  }"> Lam Tin </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Lau Fau shan'  }"> Lau Fau shan </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Lei Yue Mun'  }"> Lei Yue Mun </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Lok Fu'  }"> Lok Fu </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Ma On Shan'  }"> Ma On Shan </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Ma Wan'  }"> Ma Wan </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Mei Foo'  }"> Mei Foo </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Mid-Levels'  }"> Mid-Levels </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Mong Kok'  }"> Mong Kok </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Ngau Tau Kok'  }"> Ngau Tau Kok </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'North Point'  }"> North Point </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Pok Fu Lam'  }"> Pok Fu Lam </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Prince Edward'  }"> Prince Edward </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Quarry Bay'  }"> Quarry Bay </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Repulse Bay'  }"> Repulse Bay </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Sai Kung'  }"> Sai Kung </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Sai Wan Ho'  }"> Sai Wan Ho </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'San Po Kong'  }"> San Po Kong </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Sha Tin'  }"> Sha Tin </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Sham Shui Po'  }"> Sham Shui Po </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Shau Kei Wan'  }"> Shau Kei Wan </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Shek Kip Mei'  }"> Shek Kip Mei </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Shek O'  }"> Shek O </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Sheung Shui'  }"> Sheung Shui </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Stanley'  }"> Stanley </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tai Hang'  }"> Tai Hang </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tai Kok Tsui'  }"> Tai Kok Tsui </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tai Koo'  }"> Tai Koo </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tai Po'  }"> Tai Po </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tai Wai'  }"> Tai Wai </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tai Wo'  }"> Tai Wo </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'The Peak'  }"> The Peak </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tin Hau'  }"> Tin Hau </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tin Shui Wai'  }"> Tin Shui Wai </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'To Kwa Wan'  }"> To Kwa Wan </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tseung Kwan O'  }"> Tseung Kwan O </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tsim Sha Tsui'  }"> Tsim Sha Tsui </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tsing Yi'  }"> Tsing Yi </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tsuen Wan'  }"> Tsuen Wan </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tsz Wan Shan'  }"> Tsz Wan Shan </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Tuen Mun'  }"> Tuen Mun </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Wan Chai'  }"> Wan Chai </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Wong Chuk Hang'  }"> Wong Chuk Hang </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Wong Tai Sin'  }"> Wong Tai Sin </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Yau Ma Tei'  }"> Yau Ma Tei </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Yau Tong'  }"> Yau Tong </a>
+  
+  
+            <div class="dropdown-divider"></div>
+            <a routerLink="/restaurants" [queryParams]="{ district:  'Yuen Long'  }"> Yuen Long </a>
+  
+  
           </div>
-    </form> 
-</div>
-
-</section>
- 
+          <div class="dropdown-divider"></div>
+        </div>
+      </form>
+    </div>
+  
+  </section>
+  
