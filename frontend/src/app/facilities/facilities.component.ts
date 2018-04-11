@@ -22,10 +22,8 @@ export class FacilitiesComponent implements OnInit {
     this.getFacilities();
   }
   getFacilities():void{
-    this.facilitiesService.getFacilities().
-    subscribe(res => {
-      this.facilities = res; 
-      console.log(res);
+    this.facilitiesService.getFacilities().subscribe(res => {
+      this.facilities = res;
   });
 
 }
