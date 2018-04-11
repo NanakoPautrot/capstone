@@ -23,8 +23,10 @@ import { LocationsService } from './locations.service';
 import { HttpModule } from '@angular/http';
 import { FacilitiesComponent } from './facilities/facilities.component';
 import { FacilitiesService } from './facilities.service';
+import { RestaurantProfileComponent } from './restaurant-profile/restaurant-profile.component';
 
-
+import { NgxPaginationModule } from 'ngx-pagination';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -39,12 +41,17 @@ import { FacilitiesService } from './facilities.service';
     RestaurantsComponent,
     LocationsComponent,
     FacilitiesComponent,
+    RestaurantProfileComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    NgxPaginationModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDMUflkNk54BQQHIOgfCL1QzgZXwG33QkY'
+    })
   ],
    
   providers: [
