@@ -17,7 +17,6 @@ export default class DistrictRouter{
         let router = express.Router();
         router.get("/", this.get.bind(this));
         router.get("/:district", this.getLocation.bind(this));
-        
         return router;
     }
 
@@ -30,6 +29,7 @@ export default class DistrictRouter{
                 res.status(500).json(err)
             });
     }
+    
     //getting districts whenever a user request districts for a given region
     getLocation(req: express.Request, res: express.Response){
         let district:string = req.params.district;
