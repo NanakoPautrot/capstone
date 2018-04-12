@@ -6,7 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { RestaurantService } from '../restaurant.service';
-import { RestaurantRegionService } from '../restaurant-region.service';
+
 
 @Component({
   selector: 'app-restaurants',
