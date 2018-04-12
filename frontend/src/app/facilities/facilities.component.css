@@ -1,14 +1,15 @@
 #facilityList {
   width: 80%;
-  background-color: rgb(74, 233, 233);
+  background-color:white;
   font-size: 15px;
   margin: 20px auto;
-  border-radius: 5%;
+
+
 }
 li {
   list-style-type: none;
   padding:10px;
-  border-bottom:1px solid #ccc;
+  
   text-decoration: none;
 }
 ul {
