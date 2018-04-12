@@ -2,10 +2,13 @@
   width: 80%;
   background-color:white;
   font-size: 15px;
-  margin: 20px auto;
-
-
+  margin: 15px auto;
 }
+
+a {
+  color:black;
+}
+
 li {
   list-style-type: none;
   padding:10px;
@@ -14,8 +17,11 @@ li {
 }
 ul {
   padding: 10px;
+ 
 }
 li :hover{
   background-color:orange;
   cursor: pointer;
+  text-decoration: none;
+ 
 }

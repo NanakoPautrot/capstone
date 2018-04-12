@@ -9,8 +9,10 @@
   overflow-y: scroll;
 }
 button {
-  background-color: gray;
+  background:transparent;
   margin: 0.5rem;
+  border: none;
+  
 }
 ul {
   padding: 10px;
