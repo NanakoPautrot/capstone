@@ -16,10 +16,6 @@ export default class DistrictService {
         return  this.knex('districts').select();
      }
 
-     selectRegions(){
-        return this.knex('districts').select({'region':'region'});
-     }
-
      location(district:string) {
          return this.knex('districts').select()
          .where('districts.region', district);

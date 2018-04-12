@@ -28,7 +28,7 @@ export class RestaurantService {
    //getRestaurants(district: string = '', facility: number = null) { // = 'Hong Kong
    //return this.http.get('http://localhost:3030/restaurants/?district=' + district + '&facility=' + facility)
    getRestaurants(district: string) { // = 'Hong Kong
-    return this.http.get('http://localhost:3030/restaurants/?district=' + district);
+    return this.http.get('http://localhost:3030/restaurants?district=' + district);
   }
 
   getRestaurant(id: string) { // = 'Hong Kong

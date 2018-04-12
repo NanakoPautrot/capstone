@@ -45,7 +45,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json());
 // Include Restaurant Router to handle requests from /restaurants
-app.use('/restaurants', restaurantRouter.router());//ok
+app.use('/restaurants?', restaurantRouter.router());//ok
 // app.use('/restaurants/:facility/', restaurantRouter.router());//ok
 // app.use('/restaurants/:district/', restaurantRouter.router());//ok
 // app.use('/restaurants/:district/:facility', restaurantRouter.router());//ok
@@ -64,3 +64,5 @@ app.use('/restaurants/restauFacilities', restaurantRouter.router());
 app.listen(PORT,() => {
     console.log(`Application started at port: ${PORT}`);
 });
+
+
