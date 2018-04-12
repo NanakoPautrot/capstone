@@ -1,0 +1,27 @@
+<div *ngIf='this.restaurant' id='profile'>
+
+  <h1 *ngIf='this.restaurant'>{{this.restaurant.name}}</h1>
+
+  <agm-map [zoom]="zoom" [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+
+  <div id='info'>
+    <div>
+      <img src="{{this.restaurant.img_url}}" />
+    </div>
+    <div>
+      <p>Cuisine</p>
+      <p>{{this.restaurant.cuisine}}</p>
+    </div>
+    <div>
+      <p>Rating</p>
+      <p>{{this.restaurant.rating}}</p>
+    </div>
+    <div>
+      <p>Price Range</p>
+      <p>{{this.restaurant.price_range}}</p>
+    </div>
+  </div>
+
+</div>

@@ -1,28 +1,21 @@
 <div id="list" class="container">
-<h2>Restaurants List</h2>
-<p>Here we show restaurants from the backend</p>
-<!--
-<ul class="mock_list">
-  <li *ngFor="let restaurant of this.restaurants | async" >
-    <span class="badge">{{this.restaurants.name}}</span> 
-  </li>
-</ul>
--->
-<ul class="ul_list">
-  <li *ngFor="let restaurant of restaurants" >
-    <span class="badge"><a href="">{{restaurant.name}}</a>&nbsp;{{restaurant.address}} </span> 
-  </li>
-</ul>
-</div>
+  <div id='header'>
+    <h2>Restaurants List</h2>
+    <p>Here we show restaurants from the backend</p>
+  </div>
+  <div id='pagination'>
+    <ul>
+      <div class='restaurantCol' *ngFor="let restaurant of restaurants | paginate: { itemsPerPage: 5, currentPage: p }">
 
-<div id="address" class="right">
-  <h2>Addresses for restaurants</h2>
-  <p>Here we show restaurants from the backend</p>
-  <!--
-  <ul class="mock_list">
-    <li *ngFor="let restaurant of this.restaurants | async" >
-      <span class="badge">{{this.restaurants.name}}</span> 
-    </li>
-  </ul>
-  -->
- 
+        <img *ngIf="!restaurant['img_url']" class='restaurantImg' src="../../assets/Unknown.png" />
+        <img *ngIf="restaurant['img_url']" class='restaurantImg' src="{{restaurant['img_url']}}" />
+        <div>
+          <p class='restaurantName' routerLink='/restaurant_profile' [queryParams]="{ name : restaurant.name, id : restaurant.id }">{{restaurant.name}}</p>
+          <p>{{restaurant.address}}</p>
+        </div>
+      </div>
+    </ul>
+
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

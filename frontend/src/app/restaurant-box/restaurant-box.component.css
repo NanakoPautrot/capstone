@@ -1,3 +1,10 @@
 #restauBox{
     float:right;
 }
+#sideBar {
+    width: 30%;
+}
+#restaurantBox {
+    display: flex;
+    justify-content: space-between
+}

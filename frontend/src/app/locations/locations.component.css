@@ -1,17 +1,22 @@
 
-#districtList {
-  width: 20%;
-  max-height:50%;
-  position:absolute;
+#districsList {
+  width: 80%;
+  max-height:400px;
   background-color: aqua;
-  margin-left:10px;
-  overflow:auto;
+  margin: 20px auto;
+  padding: 0px;
+  overflow-y: scroll;
+}
+ul {
+  padding: 10px;
 }
 li{
   list-style-type: none;
   padding:3px;
   border-bottom:1px solid #ccc;
+  text-decoration: none;
 }
 li :hover{
   background-color:orange;
+  cursor: pointer;
 }
