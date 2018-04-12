@@ -42,6 +42,7 @@ error(err) {
       this.lat = pos.coords.latitude;
       this.lng = pos.coords.longitude;
       console.log(this.lat);
+      console.log(this.lng);
     }, this.error, this.options);
     if (this.route.queryParams['_value'].district) {
       this.getRestaurants(this.route.queryParams['_value'].district);

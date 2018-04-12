@@ -28,6 +28,7 @@ export class RestaurantProfileComponent implements OnInit {
       this.lat = Number(res[0].latitude);
       this.lng = Number(res[0].longitude);
       console.log(res);
+      console.log(this.restaurant);
     });
   }
 }
