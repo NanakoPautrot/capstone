@@ -15,19 +15,37 @@
           <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
             <div class="form-check px-5 py-4">
           
+            <!-- <div class="dropdown-divider"></div>  -->
+             <ul>
+                 <li *ngFor="let region of regions"> {{region}}</li>
+             </ul>
+       <!--  <a  routerLink="/restaurants" [queryParams]={region:Hong}>{{region}}</a> -->
+          <!-- I think this should be a list of routerLink that will display region list from backend
+            {{region.name}}, we have to use *ngFor to generate list /or button list of regions. We have to move in the 
+            component class and to make the logic such that when a user clicks a region, its name is shown in the url.
+            This will help to got generate a public property in another component class lets say regionDetailComponent
+            this propety holding the name of region, will be used to be a parameter to a function that retreive a list 
+            of districts given a region name.(In the backend I have to create a router that retreive districts by region)
+            By using district service, I can retreive districts by region, and inject it in the regionalDetail clall
+            where it is assigned to a property that will show it in the component view by databinding.
+
+            NB:I think we need a router to bring the regions to the frontend.
+           
+        --><!--
              <div class="dropdown-divider"></div>  
-              <a routerLink="/restaurants" [queryParams]="{ region: 'hongkongisland' }">Hong Kong Island</a>
-          
-              <div class="dropdown-divider"></div>  
               <a routerLink="/restaurants"  [queryParams]="{region: 'kowloon'}">Kowloon</a>
           
              <div class="dropdown-divider"></div>  
               <a routerLink="/restaurants" [queryParams]="{region: 'New Territories'}">New Territories</a>
-            </div>
+    
+            -->     </div> 
            <div class="dropdown-divider"></div>   
-          </div>
+          </div>  
     </form> 
+    
 </div>
 
 </section>
- 
+<ul>
+    <li *ngFor="let item of regions"> {{item.region}}</li>
+</ul>
