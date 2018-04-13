@@ -12,7 +12,7 @@ export default class RestaurantService {
         this.knex = knex
     }
 
-    list(/*district: string = '', facility?: number*/) {
+    list(district: string = '') {
         return this.knex('restaurants')
         .innerJoin('districts', 'districts.id', 'restaurants.district_id')
         .innerJoin('restaurants_facilities', 'restaurants_facilities.restaurant_id', 'restaurants.id')
@@ -36,12 +36,20 @@ export default class RestaurantService {
             'district_name'    : 'districts.name',                        
             'region_name'      : 'districts.region'                   
         })
-      /*  .where('districts.name', district)
-        .andWhere('restaurants_facilities.facility_id',facility) */
+        .where('districts.name', district)
     }
+
+
+    restaurant(id: string = '') {
+        return this.knex('restaurants')
+        .select()
+        .where('id', id)
+    }
+
+
     //to get restaurants by a specific selected district
-    districtRestau(districtName:string, facilityId: string,restaurantId:string){
-        let query = this.knex('restaurants')
+    districtRestau(district:string){
+        return this.knex('restaurants')
             .innerJoin('districts', 'districts.id', 'restaurants.district_id')
             .innerJoin('restaurants_facilities', 'restaurants_facilities.restaurant_id', 'restaurants.id')
             .select({
@@ -62,22 +70,9 @@ export default class RestaurantService {
                 'district_id'      : 'districts.id',                       
                 'district_name'    : 'districts.name',                        
                 'region_name'      : 'districts.region' ,
-                'facility_id'      : 'restaurants_facilities.facility_id'
-            });
-
-        if (districtName) {
-            query.where('districts.name', districtName);
+            })
+            .where('districts.name', district)
         }
-
-        if (facilityId) {
-            query.where('restaurants_facilities.facility_id', facilityId);
-        }
-        if (restaurantId) {
-            query.where('restaurant_id', restaurantId);
-        }
-
-        return query;
-    }
 
     restauByFacility(district:string,facility:number){
         return this.knex('restaurants')
