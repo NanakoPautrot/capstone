@@ -46,10 +46,11 @@ error(err) {
         console.log(this.lng);
        this.district= queryParams.district;
       }, this.error, this.options);
-      if (queryParams.district,queryParams.facility){
-        this.getRestaurants(queryParams.district,queryParams.facility);
+      if (queryParams.district/*queryParams.facility*/){
+        this.getRestaurants(queryParams.district/*queryParams.facility*/);
+        console.log(queryParams.facility);
       } else {
-        this.getRestaurants('Aberdeen',1);
+        this.getRestaurants('Aberdeen');
       }
     })
 
@@ -66,8 +67,8 @@ error(err) {
     // }
   }
   
-    getRestaurants(district,facility): void {
-      this.restaurantService.getRestaurants(district,facility).subscribe((res: any) => {
+    getRestaurants(district,/*facility*/): void {
+      this.restaurantService.getRestaurants(district/*facility*/).subscribe((res: any) => {
         const ref = [];
         res = res.filter((element, idx) => {
           if (ref.indexOf(element.id) === -1) {
