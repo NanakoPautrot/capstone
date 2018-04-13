@@ -19,7 +19,7 @@ export class RestaurantsComponent implements OnInit {
 
 restaurants: any;
 district:string;
-facility?:number;
+facility?:Number;
 region: string;
 lat: number;
 lng: number;
@@ -44,11 +44,12 @@ error(err) {
         this.lng = pos.coords.longitude;
         console.log(this.lat);
         console.log(this.lng);
+       this.district= queryParams.district;
       }, this.error, this.options);
-      if (queryParams.district) {
-        this.getRestaurants(queryParams.district);
+      if (queryParams.district,queryParams.facility){
+        this.getRestaurants(queryParams.district,queryParams.facility);
       } else {
-        this.getRestaurants('Aberdeen');
+        this.getRestaurants('Aberdeen',1);
       }
     })
 
@@ -65,8 +66,8 @@ error(err) {
     // }
   }
   
-    getRestaurants(district): void {
-      this.restaurantService.getRestaurants(district).subscribe((res: any) => {
+    getRestaurants(district,facility): void {
+      this.restaurantService.getRestaurants(district,facility).subscribe((res: any) => {
         const ref = [];
         res = res.filter((element, idx) => {
           if (ref.indexOf(element.id) === -1) {
