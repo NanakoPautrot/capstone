@@ -22,6 +22,10 @@ li{
   padding:3px;
   border-bottom:1px solid #ccc;
   text-decoration: none;
+  
+}
+a {
+  color: black;
 }
 li :hover{
   background-color:orange;

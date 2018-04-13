@@ -38,17 +38,31 @@ error(err) {
 
   
   ngOnInit() {
-    navigator.geolocation.getCurrentPosition((pos) => {
-      this.lat = pos.coords.latitude;
-      this.lng = pos.coords.longitude;
-      console.log(this.lat);
-      console.log(this.lng);
-    }, this.error, this.options);
-    if (this.route.queryParams['_value'].district) {
-      this.getRestaurants(this.route.queryParams['_value'].district);
-    } else {
-      this.getRestaurants('Aberdeen');
-    }
+    this.route.queryParams.subscribe(queryParams => {
+      navigator.geolocation.getCurrentPosition((pos) => {
+        this.lat = pos.coords.latitude;
+        this.lng = pos.coords.longitude;
+        console.log(this.lat);
+        console.log(this.lng);
+      }, this.error, this.options);
+      if (queryParams.district) {
+        this.getRestaurants(queryParams.district);
+      } else {
+        this.getRestaurants('Aberdeen');
+      }
+    })
+
+    // navigator.geolocation.getCurrentPosition((pos) => {
+    //   this.lat = pos.coords.latitude;
+    //   this.lng = pos.coords.longitude;
+    //   console.log(this.lat);
+    //   console.log(this.lng);
+    // }, this.error, this.options);
+    // if (this.route.queryParams['_value'].district) {
+    //   this.getRestaurants(this.route.queryParams['_value'].district);
+    // } else {
+    //   this.getRestaurants('Aberdeen');
+    // }
   }
   
     getRestaurants(district): void {

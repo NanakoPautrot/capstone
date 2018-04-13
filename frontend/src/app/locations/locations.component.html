@@ -4,7 +4,7 @@
 <div id="districsList" class="container">
   <ul class="ul_list">
     <li *ngFor="let district of districts">
-      <button (click)='buttonClick(district.name)' [disabled]="district.name === currentDistrict">{{district.name}}</button>
+      <a routerLink="/restaurants" [queryParams]="{ district:  district.name  }"> {{district.name}} </a>
     </li>
   </ul>
 </div>
