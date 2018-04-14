@@ -7,4 +7,15 @@
     text-align: center;
 } 
 
-
+/*
+@media screen and (max-width: 768px) {
+    #heading {
+        position: fixed;
+        left: -100%;
+        transition: 1s;
+    }
+    #heading.opened {
+        left:0;
+    }
+}
+*/

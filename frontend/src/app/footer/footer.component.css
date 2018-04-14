@@ -1,6 +1,27 @@
 .footer {
-    height: 20vh;
+    height: 10vh;
     width: 100%;
     background-color: black;
     color: white;
+    text-align: center;
+    display: inline-block;
+    
+}
+
+button {
+    background: transparent;
+    border: none;
+    color:white;
+}
+button:hover {
+    background: transparent;
+    border: none;
+}
+i {
+    color:white;
+}
+
+i:hover {
+    color: blue;
+
 }
