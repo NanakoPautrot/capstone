@@ -6,3 +6,9 @@ a {
     font-family: 'Kalam', cursive;
     font-size: 3rem;
 }
+
+@media only screen and (max-width: 720px){
+    #yummy {
+        font-size: 2rem;
+    }
+}
