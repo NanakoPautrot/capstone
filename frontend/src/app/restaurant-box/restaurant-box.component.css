@@ -9,3 +9,23 @@
     display: flex;
     justify-content: space-between
 }
+@media only screen and (min-width: 840px){
+#sideBar {
+    font-size: 15px;
+    width: 30%;
+}
+#restaurantBox {
+    display: flex;
+    justify-content: space-between;
+ }
+}
+@media only screen and (max-width: 720px){
+    #sideBar {
+        font-size: 15px;
+        width: 100%;
+    }
+    #restaurantBox {
+        display: flex;
+        flex-direction:column;
+     }
+    }
