@@ -42,11 +42,12 @@ h3 {
     }
 }
 
-@media only screen and (min-width: 840px){
+
+@media only screen and (max-width: 840px){
     .banner {
-        height: 60vh;
+        height: 80vh;
     }
     h3 {
-        font-size: 1rem;
+        font-size: 3rem;
     }
 }
