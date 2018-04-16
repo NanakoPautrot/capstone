@@ -16,6 +16,8 @@ export default class RestaurantRouter{
     router(){
         let router = express.Router();
         router.get("/restaurant", this.getRestaurant.bind(this));
+        router.get("/restaurants", this.getRestaurants.bind(this));
+        router.get("/restaurants_facility", this.getRestauByFacility.bind(this));
         router.get("/", this.get.bind(this));
         // router.get("/:district", this.getRestauByDistrict.bind(this));
         // router.get("/:district/:facility", this.getRestauByFacility.bind(this));
@@ -62,6 +64,20 @@ export default class RestaurantRouter{
                 res.status(500).json(err)
             });
     }
+    getRestaurants(req: express.Request, res: express.Response){
+        // check if req.query.facility is empty string?
+        // if yes => then no need filtering
+        // if no => do the filtering for facility
+        // check if req.query.district is empty string?
+        return this.restaurantService.restaurants()
+            .then((data: any) => {
+                console.log("success")
+                res.json(data);
+            })
+            .catch((err: express.Errback) => {
+                res.status(500).json(err)
+            });
+    }
     
     getRestauByDistrict(req: express.Request, res: express.Response){
         // let district:string = req.params.district;
@@ -75,9 +91,12 @@ export default class RestaurantRouter{
     
     }
     getRestauByFacility(req: express.Request, res: express.Response){
-        let district:string = req.params.district;
-        let facility:number     =req.params.facility;
+        let district:string = req.query.district;
+        let facility:number =req.query.facility;
+        console.log(district);
+        console.log(facility);
         return this.restaurantService.restauByFacility(district,facility)
+        
         .then((data) =>{
             res.json(data);
         })

@@ -1,9 +1,10 @@
 <h3>Facilities Description</h3>
 <div id="facilityList" class="container">
 <ul class="fac_list">
-  <li  *ngFor="let facility of facilities" >
+  <li *ngFor="let facility of facilities" >
+    <button [disabled]="facility.id === currentFacility" (click)='clickFacilities(facility.id)'>{{facility.description}}</button>
  <!-- <a href=""> {{facility.description}}</a> <hr>  -->
-  <a routerLink="/restaurants"  [queryParams]="{ facility: facility.id  }"> {{facility.description}} </a>
+ <!-- <a routerLink="/restaurants"  [queryParams]="{ facility: facility.id  }"> {{facility.description}} </a> -->
   </li>
 </ul>
 </div>
