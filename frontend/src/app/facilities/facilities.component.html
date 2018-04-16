@@ -1,7 +1,7 @@
 <h3>Facilities Description</h3>
 <div id="facilityList" class="container">
 <ul class="fac_list">
-  <li *ngFor="let facility of facilities" >
+  <li  *ngFor="let facility of facilities" >
  <!-- <a href=""> {{facility.description}}</a> <hr>  -->
   <a routerLink="/restaurants"  [queryParams]="{ facility: facility.id  }"> {{facility.description}} </a>
   </li>

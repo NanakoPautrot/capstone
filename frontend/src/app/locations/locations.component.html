@@ -3,7 +3,7 @@
 
 <div id="districsList" class="container">
   <ul class="ul_list">
-    <li *ngFor="let district of districts">
+    <li (click)="whoAmI(this.district.name)" *ngFor="let district of districts">
       <a routerLink="/restaurants" [queryParams]="{ district:  district.name  }"> {{district.name}} </a>
     </li>
   </ul>

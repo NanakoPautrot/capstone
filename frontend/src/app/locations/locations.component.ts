@@ -31,6 +31,9 @@ currentDistrict: any;
   buttonClick(name) {
     console.log(name);
   }
+  whoAmI(data){
+    console.log(data);
+  }
 }
 
 function sortDistrict(a, b) {
