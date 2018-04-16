@@ -34,7 +34,8 @@ export default class RestaurantService {
             'price_range'      : 'restaurants.price_range',            
             'district_id'      : 'districts.id',                       
             'district_name'    : 'districts.name',                        
-            'region_name'      : 'districts.region'                   
+            'region_name'      : 'districts.region',
+            'facility_id'      : 'restaurants_facilities.facility_id',                    
         })
         .where('districts.name', district)
     }
@@ -44,6 +45,11 @@ export default class RestaurantService {
         return this.knex('restaurants')
         .select()
         .where('id', id)
+    }
+
+    restaurants(id: string = '') {
+        return this.knex('restaurants')
+        .select()
     }
 
 
@@ -101,7 +107,7 @@ export default class RestaurantService {
             'region_name'      : 'districts.region' 
         })
         .where('districts.name', district)
-        .andWhere('restaurants_facilities.facility_id',facility)
+        .andWhere('restaurants_facilities.facility_id', Number(facility))
     }
         
     }
