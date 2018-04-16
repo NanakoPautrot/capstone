@@ -18,7 +18,6 @@ import { LocationsComponent } from './locations/locations.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 
 import { RestaurantService } from './restaurant.service';
-
 import { LocationsService } from './locations.service';
 import { HttpModule } from '@angular/http';
 import { FacilitiesComponent } from './facilities/facilities.component';
