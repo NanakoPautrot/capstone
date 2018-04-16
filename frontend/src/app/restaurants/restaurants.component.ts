@@ -36,6 +36,8 @@ export class RestaurantsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private restaurantService: RestaurantService, private locationsService: LocationsService, private facilitiesService: FacilitiesService) {
     this.subscription_location = this.locationsService.getLocation().subscribe(location => {
       this.getRestaurantsByDistrict(location.selectedLocation);
+      this.district = location.selectedLocation;
+      
     });
     this.subscription_facility = this.facilitiesService.getFacility().subscribe(facility => {
       this.restaurants = this.filterRestaurantByFacility(facility.facilityId);
@@ -44,6 +46,7 @@ export class RestaurantsComponent implements OnInit {
 
    ngOnInit() {
     if (this.route.queryParams['_value'].district) {
+      this.district = this.route.queryParams['_value'].district;
       this.getRestaurantsByDistrict(this.route.queryParams['_value'].district);
     } else {
       this.getRestaurants();

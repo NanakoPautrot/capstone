@@ -1,6 +1,7 @@
 <div id="list" class="container">
     <div id='header'>
-      <h2>Restaurant Directory for {{district}} district</h2>
+      <h2 *ngIf="!district" >Restaurant Directory for  Aberdeen district</h2>
+      <h2 *ngIf="district">Restaurant Directory for  {{district}} district</h2>
       
     </div>
     <div id='pagination'>
