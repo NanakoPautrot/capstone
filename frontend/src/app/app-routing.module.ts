@@ -11,7 +11,7 @@ import { RestaurantProfileComponent } from './restaurant-profile/restaurant-prof
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: MainComponent},
-  { path: 'about', component: AboutComponent },
+  { path: 'about', component: AboutComponent, },
   { path: 'restaurants', component: RestaurantBoxComponent },
   { path: 'restaurant_profile', component: RestaurantProfileComponent},
 ];

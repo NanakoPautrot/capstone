@@ -33,3 +33,21 @@ h3 {
     height: 300px;
     overflow: scroll
 }
+@media only screen and (max-width: 720px){
+    .banner {
+        height: 60vh;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 840px){
+    .banner {
+        height: 80vh;
+    }
+    h3 {
+        font-size: 3rem;
+    }
+}
