@@ -1,6 +1,6 @@
 #restauBox{
     /*float:right;  */
-    width:100%;
+    width:110%;
 }
 #sideBar {
     width: 30%;
@@ -22,7 +22,7 @@
 @media only screen and (max-width: 720px){
     #sideBar {
         font-size: 15px;
-        width: 100%;
+        width: 80%;
         
     }
     #restaurantBox {
