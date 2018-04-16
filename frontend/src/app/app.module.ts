@@ -49,7 +49,8 @@ import { AgmCoreModule } from '@agm/core';
     HttpModule,
     NgxPaginationModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDMUflkNk54BQQHIOgfCL1QzgZXwG33QkY'
+      apiKey:'AIzaSyBd5bagiPlGspKAlknD6cr3frR0TtL2bmQ'
+      
     })
   ],
    
