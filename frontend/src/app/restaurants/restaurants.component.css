@@ -46,8 +46,24 @@
       font-weight: bolder;
   }
   @media only screen and (max-width: 720px){
+
+    #list {
+        width:70%;
+    }
+    .restaurantCol {
+        margin: 0px;
+    }
+    h2 {
+        font-size: 20px;
+    }
     .restaurantName {
         font-size: 16px;
         font-weight: bolder;
     }
+    .restaurantImg {
+        height: 60px;
+        width: 80px;
+        margin-right: 15px;
+    }
+   
     }

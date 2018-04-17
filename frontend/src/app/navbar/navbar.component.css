@@ -1,7 +1,7 @@
 a {
     color: black;
-    margin-left: 30px;
-    
+   
+    font-size: 20px;
 }
 
 
@@ -18,5 +18,10 @@ a img {
         width: 85px;
         height: 30px;
     
+    }
+
+    a {
+      
+        font-size: 10px;
     }
 }

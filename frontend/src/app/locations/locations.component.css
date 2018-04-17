@@ -4,8 +4,7 @@
   max-height:400px;
   background-color:white;
   margin: 20px auto;
-  padding: 0px;
- 
+  padding: 5px;
   overflow-y: scroll;
 }
 button {
@@ -19,7 +18,7 @@ ul {
 }
 li{
   list-style-type: none;
-  padding:3px;
+  padding:10px;
   border-bottom:1px solid #ccc;
   text-decoration: none;
   
@@ -30,4 +29,5 @@ a {
 li :hover{
   background-color:orange;
   cursor: pointer;
+  padding: 5px;
 }
