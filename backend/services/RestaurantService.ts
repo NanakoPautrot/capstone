@@ -54,7 +54,7 @@ export default class RestaurantService {
 
 
     //to get restaurants by a specific selected district
-    districtRestau(district:string){
+    districtRestau(district:string,facility:Number,id:Number){
         return this.knex('restaurants')
             .innerJoin('districts', 'districts.id', 'restaurants.district_id')
             .innerJoin('restaurants_facilities', 'restaurants_facilities.restaurant_id', 'restaurants.id')
